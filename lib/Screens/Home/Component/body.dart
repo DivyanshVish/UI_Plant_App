@@ -12,6 +12,8 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
+/* -------------------- This is used to Scroll the screen ------------------- */
+
     return SingleChildScrollView(
       child: Column(
         children: [
