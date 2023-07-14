@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:plantapp/Screens/Home/Component/TitlewithCustomUnderLine.dart';
+import 'package:plantapp/comp/FeaturePlantsCard.dart';
+import 'package:plantapp/comp/Recommended_Plant.dart';
+import 'package:plantapp/comp/TitlewithMoreBtn.dart';
 
-import '../../../constant.dart';
-import 'FeaturePlantsCard.dart';
 import 'HeaderwithSearchBox.dart';
-import 'Recommended_Plant.dart';
-import 'TitlewithMoreBtn.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
