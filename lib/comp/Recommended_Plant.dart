@@ -15,47 +15,44 @@ class Recommended_Plant extends StatelessWidget {
       child: Row(
         children: [
           RecomendedPlantCard(
-            image: "assets/images/image_1.png",
-            title: "Samantha",
-            country: "Russia",
-            price: 400,
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const DetailScreen(),
-                ),
-              );
-            },
-          ),
+              image: "assets/images/image_1.png",
+              title: "Samantha",
+              country: "Russia",
+              price: 400,
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailScreen(),
+                  ),
+                );
+              }),
           RecomendedPlantCard(
-            image: "assets/images/image_2.png",
-            title: "Angelica",
-            country: "USA",
-            price: 400,
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const DetailScreen(),
-                ),
-              );
-            },
-          ),
+              image: "assets/images/image_2.png",
+              title: "Angelica",
+              country: "USA",
+              price: 400,
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailScreen(),
+                  ),
+                );
+              }),
           RecomendedPlantCard(
-            image: "assets/images/image_3.png",
-            title: "Samantha",
-            country: "Russia",
-            price: 400,
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const DetailScreen(),
-                ),
-              );
-            },
-          ),
+              image: "assets/images/image_3.png",
+              title: "Samantha",
+              country: "Russia",
+              price: 400,
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailScreen(),
+                  ),
+                );
+              }),
         ],
       ),
     );
@@ -74,7 +71,7 @@ class RecomendedPlantCard extends StatelessWidget {
 
   final String image, title, country;
   final int price;
-  final Function press;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +87,7 @@ class RecomendedPlantCard extends StatelessWidget {
         children: [
           Image.asset(image),
           GestureDetector(
-            onTap: press(),
+            onTap: press,
             child: Container(
               padding: const EdgeInsets.all(
                 kDefaultPadding / 2,
@@ -133,10 +130,7 @@ class RecomendedPlantCard extends StatelessWidget {
                   const Spacer(),
                   Text(
                     "\$$price",
-                    style: Theme.of(context)
-                        .textTheme
-                        .labelLarge
-                        ?.copyWith(color: kPrimaryColor),
+                    style: Theme.of(context).textTheme.labelLarge?.copyWith(color: kPrimaryColor),
                   )
                 ],
               ),

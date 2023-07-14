@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:plantapp/constant.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'body.dart';
-import 'my_bottom_bar.dart';
+import 'comp/body.dart';
+import 'comp/my_bottom_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
