@@ -23,7 +23,7 @@ class Recommended_Plant extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => DetailScreen(),
+                    builder: (context) => const DetailScreen(),
                   ),
                 );
               }),
@@ -36,7 +36,7 @@ class Recommended_Plant extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => DetailScreen(),
+                    builder: (context) => const DetailScreen(),
                   ),
                 );
               }),
@@ -49,7 +49,7 @@ class Recommended_Plant extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => DetailScreen(),
+                    builder: (context) => const DetailScreen(),
                   ),
                 );
               }),
@@ -130,7 +130,10 @@ class RecomendedPlantCard extends StatelessWidget {
                   const Spacer(),
                   Text(
                     "\$$price",
-                    style: Theme.of(context).textTheme.labelLarge?.copyWith(color: kPrimaryColor),
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelLarge
+                        ?.copyWith(color: kPrimaryColor),
                   )
                 ],
               ),

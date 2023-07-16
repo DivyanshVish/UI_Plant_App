@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plantapp/constant.dart';
 
 import '../../Screens/Home/Component/Icon_card.dart';
+import '../../Screens/Home/Component/IconandCard.dart';
+import 'TitleAndPrice.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -13,70 +15,50 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          SizedBox(
-            height: size.height * .8,
-            child: Row(
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: kDefaultPadding * 3),
-                    child: Column(
-                      children: [
-                        Align(
-                          alignment: Alignment.topLeft,
-                          child: IconButton(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: kDefaultPadding),
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            icon:
-                                SvgPicture.asset("assets/icons/back_arrow.svg"),
-                          ),
-                        ),
-                        const Spacer(),
-                        const IconCard(
-                          icon: "assets/icons/sun.svg",
-                        ),
-                        const IconCard(
-                          icon: "assets/icons/icon_2.svg",
-                        ),
-                        const IconCard(
-                          icon: "assets/icons/icon_3.svg",
-                        ),
-                        const IconCard(
-                          icon: "assets/icons/icon_4.svg",
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  height: size.height * .8,
-                  width: size.width * .75,
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(63),
-                      bottomLeft: Radius.circular(63),
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        offset: const Offset(0, 10),
-                        blurRadius: 60,
-                        color: kPrimaryColor.withOpacity(.29),
+          ImageandCard(size: size),
+          const TitleAndPrice(
+            title: 'Angelica',
+            country: 'Russia',
+            price: 440,
+          ),
+          Row(
+            children: [
+              const SizedBox(
+                width: kDefaultPadding,
+              ),
+              SizedBox(
+                width: size.width / 2,
+                height: 84,
+                child: TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    backgroundColor: kPrimaryColor,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
                       ),
-                    ],
-                    image: const DecorationImage(
-                      alignment: Alignment.centerLeft,
-                      fit: BoxFit.cover,
-                      image: AssetImage("assets/images/img.png"),
+                    ),
+                  ),
+                  child: const Text(
+                    'Buy Now',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
                     ),
                   ),
                 ),
-              ],
-            ),
-          )
+              ),
+              Expanded(
+                child: TextButton(
+                  onPressed: () {},
+                  child: const Text('Description'),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: kDefaultPadding * 2,
+          ),
         ],
       ),
     );
